@@ -20,6 +20,7 @@ for file in listdir_fullpath(folder):
         modified = modified.split(" ")
         del modified[4]
         del modified[2]
+        modified[1], modified[2] = modified[2], modified[1]
         modified = " ".join(modified)
         for (index,line) in enumerate(content):
             if "Last updated" in line and ("Last updated: " + modified) not in line:

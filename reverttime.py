@@ -22,8 +22,8 @@ for file in listdir_fullpath(folder):
                 l = line.split(" ")
                 index = line.index("Last updated:")
                 year = int(l[5])
-                month = int(months.index(l[3])) + 1
-                day = int(l[4])
+                month = int(months.index(l[4])) + 1
+                day = int(l[3])
                 date = datetime.datetime(year=year, month=month, day=day, hour=0, minute=0, second=0)
                 modTime = time.mktime(date.timetuple())
                 os.utime(file, (modTime, modTime))
