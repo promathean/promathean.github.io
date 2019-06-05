@@ -24,7 +24,7 @@ for file in listdir_fullpath(folder):
         modified = " ".join(modified)
         for (index,line) in enumerate(content):
             if "Last updated" in line and ("Last updated: " + modified) not in line:
-                content[index] = "Last updated: " + modified
+                content[index] = "Last updated: " + modified + ".<br>"
                 updated = True
         if updated:
             fp = open(file, "w")
