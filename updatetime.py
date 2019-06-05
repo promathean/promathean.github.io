@@ -1,3 +1,6 @@
+### Changes the timestamp in the content to reflect accurate changes made to
+### the file
+
 import os
 import datetime
 import time
