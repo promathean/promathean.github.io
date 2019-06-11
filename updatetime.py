@@ -18,7 +18,6 @@ for file in listdir_fullpath(folder):
         modified_stat = os.stat(file)
         modified = time.ctime(modified_stat.st_mtime)
         modified = modified.split(" ")
-        print(modified)
         del modified[3]
         modified[1], modified[2] = modified[2], modified[1]
         modified = " ".join(modified)
