@@ -18,13 +18,13 @@ for file in listdir_fullpath(folder):
         modified_stat = os.stat(file)
         modified = time.ctime(modified_stat.st_mtime)
         modified = modified.split(" ")
-        del modified[4]
-        del modified[2]
+        print(modified)
+        del modified[3]
         modified[1], modified[2] = modified[2], modified[1]
         modified = " ".join(modified)
         for (index,line) in enumerate(content):
             if "Last updated" in line and ("Last updated: " + modified) not in line:
-                content[index] = "Last updated: " + modified + ".<br>"
+                content[index] = "Last updated: " + modified + ".<br>\n"
                 updated = True
         if updated:
             fp = open(file, "w")
